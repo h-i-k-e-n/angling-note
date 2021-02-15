@@ -1,0 +1,7 @@
+ <div class='lists-left'>
+    <%= link_to '新プランを作成', new_plan_path,class: "dit-list" %> </div>
+<div class="contents row">
+  <% @plans.each do |plan| %>
+   <%= render partial: "plan", locals: { plan: plan } %>
+  <% end %>
+</div>

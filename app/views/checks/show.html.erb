@@ -1,0 +1,16 @@
+<div class='p-top'>
+  
+      <%= @check.title%>
+      <br>
+      ・<%= @check.check_item_id.gsub(/,/, "・").delete!('[]"')%>
+      <br>
+      ・<%= @check.check_list_id.gsub(/,/, "・").delete!('[]"')%>
+       <br>
+     
+      <br>
+      <%= form_with( model: @check, local: true) do |f| %>
+     <div class="sell-btn-contents">
+    <%= link_to '削除', check_path(@check), method: :delete, class:'item-destroy' %>
+    </div>
+     
+     <% end %>

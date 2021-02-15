@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <div class="total">
+   <div class='nav'>
+    <div class='lists-left'>
+    
+     <ul class='reason-lists'>
+      <li class='list'>
+      <h3 class='reason-list-tex'>
+          <span class='reason-list-glay-text'>アイテム数</span>
+        </h3>  
+        <%= image_tag "item.png", class:"list-pict" %>
+         <h3 class='reason-list-text'>
+        <span class='reason-list-number'><%= Item.all.count(:id) %>個</span>
+        </h3>
+        
+      </li>
+
+      <li class='list'>
+      <h3 class='reason-list-tex'>
+          <span class='reason-list-glay-text'>総額</span>
+        </h3>
+        <%= image_tag "yen.png", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+        <span class='reason-list-number'><%= number_to_currency(delimiter = Item.all.sum(:price), :locale => 'jp') %></span>
+        </h3>
+        
+      </li>
+
+      <li class='list'>
+      <h3 class='reason-list-tex'>
+          <span class='reason-list-glay-text'>総重量</span>
+        </h3>
+        <%= image_tag "meter.png", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+        <span class='reason-list-number'><%= Item.all.sum(:weight) %>g</span>
+        </h3>
+        
+      </li>
+    </ul>
+  </div>
+     
+     <%= link_to '', "#",class: "edit-list" %>
+     
+    </div>
+   </div>
+  </div>
+ </div>
+  

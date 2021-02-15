@@ -1,0 +1,16 @@
+<%= render "shared/category_header" %>
+ <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+ <div class="form">
+  <%= form.collection_select(:category_id, Category.all, :id, :category, { include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+ 
+ <ul class='item-lists'>
+
+      <% if @item != nil %>
+        <% @items.each do |item| %>
+          <%= render partial: "items/item", locals: { item: item }  %>
+        <% end %>
+      <% end %>
+</ul>

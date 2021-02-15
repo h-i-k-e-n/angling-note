@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+}
+.top-bar{
+  background-color: #283301;
+  width: 100%;
+  height: 6vh;
+ 
+}
+.image-bar{
+  justify-content: center;
+}
+.edit-list {
+  text-decoration: none;
+  color: white;
+}
+.dit-list {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+  
+}
+.lists-left {
+  display: flex;
+  min-width: 200px;
+  align-items: center;
+}
+.total {
+  background-color: lightgray;
+  width: 100%;
+  height: 40vh;
+  margin:20px 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.list-pict {
+  margin-bottom: 10px;
+  width: 30%;
+}
+.reason-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reason-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.reason-list-number {
+  font-size: 24px;
+  line-height: 50px;
+  color: rgb(42, 43, 42);
+  
+}
+
+.reason-list-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+.reason-list-tex {
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reason-list-glay-text {
+  color: rgb(52, 53, 52);
+}
+
+.reason-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.nav-bottom {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;

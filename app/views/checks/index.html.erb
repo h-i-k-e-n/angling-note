@@ -1,0 +1,19 @@
+<%= render "shared/check" %>
+
+<h1>リスト一覧</h1>
+ <ul class='item-lists'>
+      
+        <% @checks.each do |check| %>
+          <li class='list'>
+
+ <%= link_to check_path(check) do %>
+
+    <div class='item-info'>
+      <div class='item-name'>
+        <%= check.title %>
+      </div>
+    </div>
+</li>
+        <% end %>
+      <% end %>
+</ul>

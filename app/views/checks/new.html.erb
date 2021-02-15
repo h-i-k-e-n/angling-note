@@ -1,0 +1,17 @@
+<%= form_with model: @check, local: true do |f| %>
+  <div class="article-box">
+    チェックリストを登録する<br>
+    <%= f.text_field :title, class:"title", placeholder:"タイトルを入力" %>
+    <br><br>
+    <%= f.label :title,'MY ITEM'%>
+    <br>
+    <%= f.collection_check_boxes(:check_item_id, Item.all, :title, :title,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
+    <br><br>
+    <%= f.label :name,'テンプレートから追加'%>
+    <br>
+    <%= f.collection_check_boxes(:check_list_id, List.all, :name, :name,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
+    </label>
+    <br><br>
+    <%= f.submit "登録" ,class:"btn" %>
+  </div>
+<% end %>

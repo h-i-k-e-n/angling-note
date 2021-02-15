@@ -1,0 +1,45 @@
+
+
+.list{
+  text-decoration: none;
+}
+.item{
+  margin: 0 auto;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+margin: 10px;
+}
+.item-price {
+    font-size: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .item-info {
+    background-color: #FFF;
+    color: black;
+    padding: 1vw;
+    
+  }
+  .item-lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .a{
+   
+    text-decoration: none;
+  
+  }
+  .item-name {
+    font-size: 2.5vh;
+    text-decoration: none;
+  }

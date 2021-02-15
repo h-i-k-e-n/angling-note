@@ -1,0 +1,86 @@
+<%= render "shared/third_header" %>
+<div class="items-sell-contents">
+  
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">アイテムの情報を入力</h2>
+    
+    <%= form_with( model: @plan, local: true) do |f| %>
+
+     <%# <%= render 'shared/error_messages', model: f.object %> 
+
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        カバー画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+
+      </div>
+    </div>
+    <%# /出品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        タイトル
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+      
+        
+        <div class="form">
+            
+          <div class="items-explain">
+        <div class="weight-bold-text">
+          場所
+        </div>
+        <%= f.text_area :place, class:"items-text", id:"item-info", placeholder:"○○海岸、××海水浴場、□□漁港"  ,maxlength:"40" %>
+      </div>
+         <div class="items-explain">
+        <div class="weight-bold-text">
+          住所
+        </div>
+        <%= f.text_area :adress, class:"items-text", id:"item-info", placeholder:"住所を入力"  ,maxlength:"40" %>
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          開始日
+        </div>
+        <div class='input-birth-wrap'>
+      <%= raw sprintf(f.date_select(:start,class:'select-birth',
+                    id:"birth-date",use_month_numbers: true,
+                    prompt:'--',start_year: 2020,end_year: (Time.now.year),
+                    date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+      終了日
+      <div class='input-birth-wrap'>
+      <%= raw sprintf(f.date_select(:end,class:'select-birth',
+                    id:"birth-date",use_month_numbers: true,
+                    prompt:'--',start_year: 2020,end_year: (Time.now.year),
+                    date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          メモ
+        </div>
+        <%= f.text_area :memo , class:"items-text", id:"item-info", placeholder:"干潮6:30、満潮13:00、大潮、最寄りにコンビニあり" ,maxlength:"40" %>
+      </div>
+      
+
+
+    
+    
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "保存" ,class:"sell-btn" %>
+      <%# <%=link_to 'もどる', plan_path, class:"back-btn" %> 
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  
+</div>
