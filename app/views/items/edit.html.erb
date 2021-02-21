@@ -61,7 +61,7 @@
       </div>
       <div class="items-explain">
         <div class="weight-bold-text">
-          価格
+          金額
         </div>
         <%= f.text_area :price, class:"items-text", id:"item-info", placeholder:"価格を入力"  ,maxlength:"7" %>
       </div>
@@ -93,7 +93,7 @@
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
-    <%= link_to '削除', item_path(@item), method: :delete, class:'item-destroy' %>
+    <%= link_to '削除', item_path(@item), method: :delete, class:'btn' %>
     </div>
     <%# /下部ボタン %>
   </div>

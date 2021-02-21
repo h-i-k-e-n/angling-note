@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit,  :update, :destroy]
+  before_action :set_item, only: [:edit,  :update]
 
  
   def index
@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
   @item = Item.new
  end
 
- def create
+def create
   @item = Item.new(item_params)
   if @item.save
     redirect_to root_path
@@ -22,9 +22,11 @@ end
 
 def show
   redirect_to root_path
+  
 end
 
 def edit
+ 
 end
 
 def update
@@ -36,9 +38,14 @@ def update
 end
 
 def destroy
+ 
+    @item = Item.find(params[:id])
   @item.destroy
+
   redirect_to root_path
+  
 end
+
 
 def search
   

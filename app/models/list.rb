@@ -10,5 +10,5 @@ class List < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :checks
+  has_many :checks,dependent: :delete_all
 end

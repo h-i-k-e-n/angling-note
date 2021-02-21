@@ -1,0 +1,133 @@
+  <%= form_with( model: @plan, local: true) do |f| %>
+
+
+    
+<div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_a, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_a, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>    
+<div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_b, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_b, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div> <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_c, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_c, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>  <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_d, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_d, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>  <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_e, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_e, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div> <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_f, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_f, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>  <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_g, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_g, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div> <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_h, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_h, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>  <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_i, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_i, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+      </div>
+  </div>  <div class="items-explain">
+    <div class="weight-bold-text">
+              スケジュール
+            </div>
+            <%= f.collection_select(:skt_j, Schedule.all, :time, :time,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
+         
+      <div class="items-explain">
+          <div class="weight-bold-text">
+            内容
+          </div>
+        <%= f.text_area :skm_j, class:"items-text", id:"item-info", placeholder:"到着、昼食、休憩、移動、帰宅"  ,maxlength:"40" %>
+   
+
+
+<div class="sell-btn-contents">
+      <%= f.submit "保存" ,class:"sell-btn" %>
+       <%=link_to 'もどる', plans_path, class:"back-btn" %> 
+    </div>
+
+      <% end %>

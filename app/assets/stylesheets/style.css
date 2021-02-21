@@ -642,7 +642,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  
 }
 
 h1,
@@ -653,7 +653,7 @@ h5,
 h6,
 body {
   line-height: 1.57;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   font-size: 16px;
   color: #666;
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
@@ -675,7 +675,7 @@ a:hover {
 
 .serif,
 div.contents.row div.content_post p {
-  font-family: 'ほのか明朝', serif;
+  font-family: "游ゴシック", "YuGothic";
 }
 
 .ultra {
@@ -843,9 +843,9 @@ header.header .user_nav ul li a {
 }
 
 div.contents.row h2 {
-  margin: 20px 0;
+  margin: 20px 0 5px -10px;
   padding: 0;
-  font-weight: normal;
+  border-bottom:1px solid rgb(204, 202, 58);
   
 }
 
@@ -854,31 +854,59 @@ div.contents.row h2 strong {
   padding-right: 5px;
   font-size: 1.2em;
 }
+div.contents.row h4 {
+  margin: 10px 0 5px 10px;
+  padding: 0;
+  font-weight: normal;
+  
+}
 
+div.contents.row h4 strong {
+  
+  padding-right: 5px;
+  font-size: 1.2em;
+}
 div.contents.row .new_user {
   font-family: "游ゴシック", "YuGothic";
 }
 
 div.contents.row div.content_post {
   margin: 20px 0;
-  padding: 15px 0;
+  padding-top: 0%;
   position: relative;
-  height: 400px;
+  overflow: hidden;
+  
+  object-fit: fill;
   color: #fff;
-  background-size: cover;
+  background-size: fill;
   background-position: center center;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   
 }
-
+div.contents.row div.content_pos {
+  margin: 20px 0;
+  padding-top: 0%;
+  position: relative;
+  overflow: hidden;
+  
+  object-fit: fill;
+  color: rgb(160, 158, 158);
+  background-size: fill;
+  background-position: center center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  padding: 0 45px;
+}
 div.contents.row div.content_post:after {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FFA60000');
   background-size: 100%;
@@ -936,6 +964,7 @@ div.contents.row div.content_post .more ul.more_list li a:hover {
   color: #fff;
 }
 
+
 div.contents.row div.content_post p {
   position: absolute;
   left: 30px;
@@ -984,12 +1013,19 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
+
+.tit {
+  
+  margin: 25px 0 25px;
+  
+}
+
 form input,
 form textarea {
   width: 100%;
-  margin: 5px 0 15px;
+  margin: -1px 0 -16px;
   padding: 10px;
-  border: 1px solid #D8D8D8;
+  border: 3px solid #D8D8D8;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
 }
@@ -1056,7 +1092,35 @@ footer p {
 }
 
 .search-form .search-btn {
-  width: 10%;
+  margin: 10px;
+  width: 80%;
 }
 
 
+.service-box {
+  width: 100%;
+}
+.img-box {
+  width: 100%;
+  padding-top: 70%;
+  position: relative;
+}
+.service-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}

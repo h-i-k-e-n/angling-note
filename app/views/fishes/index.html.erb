@@ -1,0 +1,110 @@
+<%= render "shared/category_header" %>
+
+ <div class="items-sel">
+ <div class="column">
+ <ul class='item-list'>
+ <li class='list'>
+ <div class="items-sell-cont">
+
+ 
+  <div class="items-sell-m">
+
+ <%= form_with(url: fishes_path, local: true, method: :post, ) do |form| %>
+ 
+ <div class="img-uplod">
+      <div class="weight-bold-text">
+        魚の写真
+      
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= form.file_field :image, id:"item-image" %>
+
+
+<div class="new-item">
+      <div class="weight-bold-text">
+        タイトル
+      </div>
+      <%= form.text_area :name, class:"items-tex", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+      
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          メモ
+        </div>
+        <%= form.text_area :memo , class:"items-tex", id:"item-info", placeholder:"釣れた場所、釣れた日、サイズ" ,maxlength:"40" %>
+      </div>
+      
+    <div class="items-explain">
+        
+          使用アイテム
+        </div>
+ <div class="form">
+  <%= form.collection_select(:item_a, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+  </div>
+  
+
+  <div class="form">
+  <%= form.collection_select(:item_b, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+  </div>
+ 
+
+  <div class="form">
+  <%= form.collection_select(:item_c, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+  </div>
+  <br><br>
+  <%= form.submit "登録", class: "search-btn" %>
+
+<% end %>
+
+
+ </div></div></div>
+ 
+
+ 
+ </li></ul>
+ </div>
+ 
+ 
+  
+
+<ul class='item-list'>
+      <% if @fishes != nil %>
+        <% @fishes.each do |fish| %>
+         <li class='list'>
+
+          
+          
+ <%# <%= link_to edit_fish_path(fish) do %>
+    <div class='item-img-content'>
+    
+      <%= image_tag fish.image, class: "item-img" %>
+    </div>
+    <div class='item-info'>
+
+      <h3 class='item-name'>
+
+        <%= fish.name %>
+      </h3>
+      <%=link_to '詳細', checks_path, class:"btn" %>
+      <%=link_to  '削除', fish_path(fish.id), method: :delete, class:"btn" %>
+      <% end %>
+      <% end %>
+    </div>
+</div>
+
+</li>
+       
+</ul>
+</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+<%= render "shared/footer_fish" %>

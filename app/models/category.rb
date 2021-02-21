@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
-  
-  has_many :items
+  validates :category, presence: true
+  has_many :items ,dependent: :destroy
   include ActiveHash::Associations
 
 end

@@ -1,21 +1,23 @@
 Rails.application.routes.draw do
   root to: 'items#index'
  
-  resources :items, except: [ :index] do
+resources :items, except: [ :index] do
   collection do
-    get "search"
+  get "search"
+  get "category_id"
   end
 end
 
-  resources :categories, except: [ :destroy] do
-    collection do
+resources :categories, except: [ :destroy] do
+  collection do
     get "search"
     get "category_id"
   end
 end
 
-resources :checks 
-
+resources :checks do
+ resources :choices
+end
 resources :plans
-
+resources :fishes
 end

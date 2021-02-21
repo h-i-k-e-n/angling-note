@@ -1,7 +1,12 @@
 class Check < ActiveRecord::Base
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  validates :title, presence: true
 
-  belongs_to :list,optional: true
-  belongs_to :item,optional: true
+  validates :title, presence: true
+  
+  
+  
+  
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  has_one :item
+  belongs_to :list
+  has_one :choice,foreign_key: check_id
 end

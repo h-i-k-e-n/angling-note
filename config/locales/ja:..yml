@@ -1,0 +1,6 @@
+ ja:
+  models:
+  activerecord:
+    attributes:
+      check:
+        title: タイトル名

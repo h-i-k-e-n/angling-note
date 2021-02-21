@@ -2,13 +2,14 @@
 <div class="items-sell-contents">
   
   <div class="items-sell-main">
-    <h2 class="items-sell-title">アイテムの情報を入力</h2>
+  
+    
     
     <%= form_with( model: @item, local: true) do |f| %>
 
      <%= render 'shared/error_messages', model: f.object %>
 
-
+<h2 class="items-sell-title">アイテムの情報を入力</h2>
     <%# 出品画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -61,7 +62,7 @@
       </div>
       <div class="items-explain">
         <div class="weight-bold-text">
-          価格
+          金額
         </div>
         <%= f.text_area :price, class:"items-text", id:"item-info", placeholder:"価格を入力"  ,maxlength:"7" %>
       </div>

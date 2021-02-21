@@ -10,11 +10,8 @@ def new
 end
 
 def create
-  
   @check = Check.new(check_params)
-
-if 
-  @check.save
+  if @check.save
     redirect_to checks_path
   else
     render :new
@@ -22,16 +19,23 @@ if
 end
 
 def show
-
-  @check = Check.find(params[:id])
   
+  @check = Check.find(params[:id])
+
+  @checks = Choice.where(check_id: params[:id])
 end
 
 def destroy
-  check = Check.find(params[:id])
-  check.destroy
-  redirect_to checks_path
+  if
+  @check = Check.find(params[:id]) && Choice.find_by(check_id: params[:id])
+  @check.destroy
+  redirect_to check_path
+else
+    @check = Check.find(params[:id])
+  @check.destroy
 
+  redirect_to checks_path
+  end
 end
 private
 

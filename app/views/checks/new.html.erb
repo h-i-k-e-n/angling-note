@@ -1,17 +1,29 @@
-<%= form_with model: @check, local: true do |f| %>
-  <div class="article-box">
-    チェックリストを登録する<br>
-    <%= f.text_field :title, class:"title", placeholder:"タイトルを入力" %>
-    <br><br>
-    <%= f.label :title,'MY ITEM'%>
-    <br>
-    <%= f.collection_check_boxes(:check_item_id, Item.all, :title, :title,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
-    <br><br>
-    <%= f.label :name,'テンプレートから追加'%>
-    <br>
-    <%= f.collection_check_boxes(:check_list_id, List.all, :name, :name,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
-    </label>
-    <br><br>
-    <%= f.submit "登録" ,class:"btn" %>
-  </div>
-<% end %>
+<%= render "shared/check_new" %>
+    <div class="items-sell-contens">
+        <div class="items-sell-main">
+           <%= form_with(model: @check,local: true)  do |f| %>
+              <%= render 'shared/error_messages', model: f.object %>
+                <div class="article-box">
+                 <h2>チェックリストを登録する</h2><br>
+                 <%= f.text_field :title, class:"title", placeholder:"タイトルを入力" %>
+                  <br><br><br><br>
+                   <h2>　　MY ITEM</h2>
+                    <br>
+                   <div class=checkbox-list>
+                    <h3> <%= f.collection_check_boxes(:check_item_id, Item.all, :title, :title,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %></h3>
+                   </div>
+                   <br><br>
+   
+                   <h2>　　テンプレートから追加</h2>
+                   <br> 
+                 <div class=checkbox-list>
+                  <h3><%= f.collection_check_boxes(:check_list_id, List.all, :name, :name,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %></h3>
+                 </div>
+                 <br><br>
+                 <%= f.submit "登録" ,class:"btn" %>
+                 <% end %>
+                  <br><br><br>
+                 <h1>  <%=link_to 'もどる', checks_path, class:"back-btn" %></h1>
+       </div>
+   </div>   
+ </div>

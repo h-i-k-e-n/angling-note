@@ -1,13 +1,16 @@
 <%= form_with model: @check, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
   <div class="article-box">
     チェックリストを登録する
     <%= f.text_field :title, class:"title", placeholder:"タイトルを入力" %>
-    
+    <div class="col-md-4 checkbox-list">
     <%= f.label :title,'MY ITEM'%>
     <%= f.collection_check_boxes(:check_item_id, Item.all, :title, :title,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
-    
+    </div>
+     <div class="col-md-4 checkbox-list">
     <%= f.label :name,'テンプレートから追加'%>
     <%= f.collection_check_boxes(:check_list_id, List.all, :name, :name,{multiple: true,include_hidden: false,class:"select-box", id:"item-category"}) %>
+   </div>
     </label>
     <%= f.submit "変更" ,class:"btn" %>
   </div>

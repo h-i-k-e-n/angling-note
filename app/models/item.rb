@@ -1,11 +1,15 @@
 class Item < ActiveRecord::Base
-  
-  validates :title, presence: true
-
-  belongs_to :category
+  validates :price,:quantity,:weight, presence: true, numericality: { only_interger: true}
+  validates :title,:manufacturer,:purchase_date,:retailer,:image, presence: true
+  has_one :category
   has_one_attached :image
+  belongs_to :fish
+  
   include ActiveHash::Associations
   has_many :checks
+
+ 
+
   def self.search(search)
     return Item.all unless search
       Item.where(['category_id LIKE ?', "%#{search}%"])
