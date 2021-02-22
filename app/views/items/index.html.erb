@@ -1,14 +1,12 @@
 <%= render "shared/header" %>
-
 <%= render "shared/header_second" %>
-        
- <ul class='item-lists' >
- 
-      <% if @items[0] != nil %>
-        <% @items.each do |item| %>
-          <%= render partial: "item", locals: { item: item }  %>
-        <% end %>
+
+   <ul class='item-lists' >
+     <% if @items[0] != nil %>
+      <% @items.each do |item| %>
+      <%= render partial: "item", locals: { item: item }  %>
       <% end %>
-</ul>
+     <% end %>
+   </ul>
 
 <%= render "shared/footer" %>

@@ -1,21 +1,20 @@
 <%= render "shared/category_header" %>
-
-<div class="items-sell-contens">
-  
-  <div class="items-sell-ma">
-
- <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
- <div class="form">
-  <%= form.collection_select(:category_id, Category.all, :id, :category, { include_blank: 'カテゴリー選択'}, {class:"select-box", id:"item-category"}) %>
-  </div>
-  <%= form.submit "検索",category_id: :nil, class: "search-btn" %> <%=link_to 'もどる', categories_path, class:"btn" %>
-<% end %>
+   <div class="items-sell-contens">
+   <div class="items-sell-ma">
+       <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+      <div class="form">
+        <%= form.collection_select(:category_id, Category.all, :id, :category, { include_blank: 'カテゴリー選択'}, {class:"select-box", id:"item-category"}) %>
+     </div>
+       <%= form.submit "検索",category_id: :nil, class: "search-btn" %> <%=link_to 'もどる', categories_path, class:"btn" %>
+    <% end %>
  
- <ul class='item-lists'>
-
-      <% if @items != nil %>
+      <ul class='item-lists'>
+        <% if @items != nil %>
         <% @items.each do |item| %>
-          <%= render partial: "items/total", locals: { item: item }  %>
+       <%= render partial: "items/total", locals: { item: item }  %>
         <% end %>
-      <% end %>
-</ul>
+        <% end %>
+     </ul>
+  </div>
+  </div>
+<%= render "shared/footer_item_search" %>

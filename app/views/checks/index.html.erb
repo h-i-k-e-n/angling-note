@@ -6,9 +6,9 @@
     
 
       <ul class='item-lis'>     
-        <% @checks.each do |check| %>
+          <% @checks.each do |check| %>
           <li class='list'>
-           <%= link_to check_path(check.id) do %>
+            <%= link_to check_path(check.id) do %>
              <div class='item-inf'>
               <div class='item-name'>
               <%= check.title %>
@@ -21,4 +21,4 @@
   </div>
   
   </div>
-  <%= render "shared/footer_second" %>
+<%= render "shared/footer_second" %>

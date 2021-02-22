@@ -1,24 +1,21 @@
 <div class="wrapper">
-  <div class="top-bar">
-   <div class='na'>
-    <h1 class= "edit-list">　　　　　　　　</h1>
-    <div class='lists-left'>
-    <%= link_to '　アイテム一覧',categories_path ,class: "edit-list" %> </div>
-      <%= image_tag "angling-logo.png", class:"image-ba"%>
+    <div class="top-bar">
+        <div class='na'>
+           <div class='lists-left'>
 
-    <div class='lists-left'>
-     <%= link_to 'アイテム登録　', new_item_path,class: "edit-list" %></div>
-     
-     <div class='lists-left'>
-    <%= link_to 'カテゴリー追加', "categories/new",class: "edit-list" %> </div>
-   
-      
+             <%= image_tag "angling-logo.png", class:"image-ba"%>
+             
+            <div class='lists-left'>
+             <%= link_to 'アイテム一覧',categories_path ,class: "edit-list" %>
+            </div>
 
-   
+             <div class='lists-left'>
+              <%= link_to 'アイテム登録', new_item_path,class: "edit-list" %>
+            </div>
 
-    
-    </div>
+              <%= link_to 'カテゴリー追加', "categories/new",class: "edit-list" %> 
+
+           </div>
+       </div>
    </div>
-  </div>
- </div>
-  
+</div>

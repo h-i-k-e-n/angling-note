@@ -9,10 +9,9 @@ class Item < ActiveRecord::Base
   has_many :checks
 
  
-
   def self.search(search)
     return Item.all unless search
       Item.where(['category_id LIKE ?', "%#{search}%"])
-   end
+  end
 
 end

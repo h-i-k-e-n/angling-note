@@ -1,33 +1,30 @@
 <div class='p-top'>
     <div class="items-sell-contens">
        <div class="items-sell-main">
+
             <div class='item-inf'>
                 <div class='item-name'>
                     <%= @check.title%>
-                </div>
-                <br><br>
-                <% if @check.check_item_id.present?%>
-                <% if @check.check_list_id.present?%>
-                  <br>
-                  <%= @check.check_item_id.gsub(/,/, "/").delete!('[]"')%>
-                  <br><br><br>
-                  <%= @check.check_list_id.gsub(/,/, "/").delete!('[]"')%>
-                  <br><br><br>
-                <%end%>
-                <%end%>
-              <ul class='item-list'>     
+                </div><br><br>
+                      <% if @check.check_item_id.present?%>
+                      <% if @check.check_list_id.present?%><br>
+                      <%= @check.check_item_id.gsub(/,/, "/").delete!('[]"')%><br><br><br>
+                      <%= @check.check_list_id.gsub(/,/, "/").delete!('[]"')%><br><br><br>
+                      <% end %>
+                      <% end %>
+                <ul class='item-list'>     
                 <%= render "choices/choice" %>
               </ul>
-          </div>
+            </div>
     
- 
             <div class="items-sell-contens">
-                <div class="sell-btn-contents">
-                  <%=link_to 'もどる', checks_path, class:"btn" %>
+                  <div class="sell-btn-contents">
+                  <%= link_to 'もどる', checks_path, class:"btn" %>
                   <%= link_to '追加', new_check_choice_path(@check.id),  method: :get, class:'btn' %>
                   <%= link_to '削除', check_path(@check), method: :delete, class:'btn' %>
-                </div>
+                  </div>
             </div> 
+
         </div>
      </div>
  </div>

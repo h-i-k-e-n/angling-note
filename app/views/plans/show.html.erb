@@ -1,4 +1,4 @@
-    <%= render "shared/plan_header" %>
+<%= render "shared/plan_header" %>
     <div class="items-sell-contents">
          <div class="items-sell-main">
              <div class="contents row">
@@ -16,46 +16,45 @@
                     </div>
 
                       <p><%= @plan.start %><br><%= @plan.title %> </p>
-                      
                   </div>
 
 <div class="content_pos"> 
-<ul class="more_list">
-                <li class='list'>
+ <ul class="more_list">
+ <li class='list'>
                
-                
-                <h2>スケジュール</h2>
-               <li> <%= @plan.start%></li>
-<h4><li> <%= @plan.skt_a%> <%= @plan.skm_a%></li></h4>
-<h4><li> <%= @plan.skt_b%> <%= @plan.skm_b%></li></h4>
-<h4><li> <%= @plan.skt_c%> <%= @plan.skm_c%></li></h4>
-<h4><li> <%= @plan.skt_d%> <%= @plan.skm_d%></li></h4>
-<h4><li> <%= @plan.skt_e%> <%= @plan.skm_e%></li></h4>
-<h4><li> <%= @plan.skt_f%> <%= @plan.skm_f%></li></h4>
-<h4><li> <%= @plan.skt_g%> <%= @plan.skm_g%></li></h4>
-<h4><li> <%= @plan.skt_h%> <%= @plan.skm_h%></li></h4>
-<h4><li> <%= @plan.skt_i%> <%= @plan.skm_i%></li></h4>
-<h4><li> <%= @plan.skt_j%> <%= @plan.skm_j%></li></h4>
+      <h2>スケジュール</h2>
+      <li> <%= @plan.start%></li>
+          <h4><li> <%= @plan.skt_a%> <%= @plan.skm_a%></li></h4>
+          <h4><li> <%= @plan.skt_b%> <%= @plan.skm_b%></li></h4>
+          <h4><li> <%= @plan.skt_c%> <%= @plan.skm_c%></li></h4>
+          <h4><li> <%= @plan.skt_d%> <%= @plan.skm_d%></li></h4>
+          <h4><li> <%= @plan.skt_e%> <%= @plan.skm_e%></li></h4>
+          <h4><li> <%= @plan.skt_f%> <%= @plan.skm_f%></li></h4>
+          <h4><li> <%= @plan.skt_g%> <%= @plan.skm_g%></li></h4>
+          <h4><li> <%= @plan.skt_h%> <%= @plan.skm_h%></li></h4>
+          <h4><li> <%= @plan.skt_i%> <%= @plan.skm_i%></li></h4>
+          <h4><li> <%= @plan.skt_j%> <%= @plan.skm_j%></li></h4>
+      <li> <%= @plan.end%></li>
 
 
-               <li> <%= @plan.end%></li>
-               
-               <h2>場所</h2>
-            <h4> <li>   <%= @plan.place%></li></h4>
-            <h4> <li>   <%= @plan.adress%></li></h4>
-             
-             <h2> メモ</h2>
-             <h4><li>   <%= @plan.memo%></li></h4>
-                
-                </li>
-                </ul>
-                
-                </div>
+      <h2>場所</h2>
+      <h4> <li> <%= @plan.place%></li></h4>
+      <h4> <li> <%= @plan.adress%></li></h4>
+
+
+      <h2> メモ</h2>
+      <h4><li> <%= @plan.memo%></li></h4>
+
+   </li>
+  </ul>
+</div>
                 
              </div>
             <div class="items-sell-contens"> 
-       <%=link_to 'もどる', plans_path, class:"back-btn" %> 
-         </div>
-     </div>
+              <%=link_to 'もどる', plans_path, class:"back-btn" %> 
+           </div>
+       </div>
+   </div>
+</div>
 
 <%= render "shared/footer_second" %>

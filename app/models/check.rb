@@ -1,9 +1,5 @@
 class Check < ActiveRecord::Base
-
   validates :title, presence: true
-  
-  
-  
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one :item

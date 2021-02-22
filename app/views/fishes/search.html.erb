@@ -1,134 +1,102 @@
 <%= render "shared/category_header" %>
 
- <div class="items-sel">
- <div class="column">
- <ul class='item-list'>
- <li class='list'>
- <div class="items-sell-cont">
-
+      <div class="items-sel">
+      <div class="column">
+       <ul class='item-list'>
+       <li class='list'>
+      <div class="items-sell-cont">
+      <div class="items-sell-m">
  
-<div class="items-sell-m">
+                   <%# 検索機能 %>
+                    <div class="weight-bold-text">
+                        釣果検索
+                   </div>
+                    <%= form_with(url: search_fishes_path, local: true, method: :get, class: "search-for") do |f| %>
+                    <%= f.text_field :keyword, placeholder: "タイトル名、アイテム名を入力", class: "input" %>
+                    <br><br>
+                    <%= f.submit "検索", class: "search-btn" %>
+                    <% end %>
+                    <br><br>
+                    <%# 検索機能 %>
+
+          <%#釣果登録%>
+          <div class="contents row">
+           <%= form_with(url: fishes_path, local: true, method: :post, ) do |f| %>
+              <div class="img-uplod">
+              <div class="weight-bold-text">
+                   釣果写真
+                  <div class="click-upload">
+                  <p>
+                   クリックしてファイルをアップロード
+                 </p>
+                   <%= f.file_field :image, id:"item-image" %>
+
+
+                  <div class="new-item">
+                  <div class="weight-bold-text">
+                   タイトル
+                 </div>
+                   <%= f.text_area :name, class:"items-tex", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+                  
+                  <div class="items-explain">
+                   使用アイテム
+                 </div>
+                  <div class="form">
+                   <%= f.collection_select(:item_a, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+                 </div>
+                  <div class="form">
+                   <%= f.collection_select(:item_b, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+                 </div>
+                  <div class="form">
+                   <%= f.collection_select(:item_c, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+                 </div>
+
+                  <div class="items-explain">
+                      <div class="weight-bold-text">
+                       メモ
+                     </div>
+                   <%= f.text_area :memo , class:"items-tex", id:"item-info", placeholder:"釣れた場所、釣れた日、サイズ" ,maxlength:"500" %>
+                 </div><br>
+                   <%= f.submit "登録", class: "search-btn" %>
+
+                   <% end %>
+              <br><br><br><br>
+              </div></div></div></div></div>
+              </li></ul></div>
+              <%#釣果登録%>
  
-
-
-
-
-<%= form_with(url: search_fishes_path, local: true, method: :get, class: "search-for") do |f| %>
-  <%= f.text_field :keyword, placeholder: "検索する", class: "input" %>
-  <br><br>
-  <%= f.submit "検索", class: "search-btn" %>
-<% end %>
-<br><br>
-
-
-
-
-<div class="contents row">
- <%= form_with(url: fishes_path, local: true, method: :post, ) do |f| %>
- <div class="img-uplod">
-      <div class="weight-bold-text">
-        釣果写真
-      
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %>
-
-
-<div class="new-item">
-      <div class="weight-bold-text">
-        タイトル
-      </div>
-      <%= f.text_area :name, class:"items-tex", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
-      
-
-      
-      
-    <div class="items-explain">
-        
-          使用アイテム
-        </div>
- <div class="form">
-  <%= f.collection_select(:item_a, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
-  </div>
-  
-
-  <div class="form">
-  <%= f.collection_select(:item_b, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
-  </div>
- 
-
-  <div class="form">
-  <%= f.collection_select(:item_c, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
-  </div>
-  <div class="items-explain">
-        <div class="weight-bold-text">
-          メモ
-        </div>
-        <%= f.text_area :memo , class:"items-tex", id:"item-info", placeholder:"釣れた場所、釣れた日、サイズ" ,maxlength:"500" %>
-      </div>
-  <br>
-  <%= f.submit "登録", class: "search-btn" %>
-
-<% end %>
-<br><br><br><br>
-
-</div>
-
- </div></div></div>
- 
-
- 
- </li></ul>
- </div>
- 
- 
+ <%#釣果一覧%>
    <div class="items-sel">
- <div class="column">
+   <div class="column">
+    <ul class='item-list'>
 
-<ul class='item-list'>
-      <% if @fishes != nil %>
+        <% if @fishes != nil %>
         <% @fishes.each do |fish| %>
-         <li class='list'>
+       <li class='list'>
 
-          
-          
- 
-    <div class='item-img-content'>
-     <%= link_to fish_path(fish.id) do %>
-     
-      <%= image_tag fish.image, class: "item-img" %>
-    </div>
+        <div class='item-img-content'>
+        <%= link_to fish_path(fish.id) do %>
+        <%= image_tag fish.image, class: "item-img" %>
+       </div>
    
-     <div class='item-info'>
-    <div class='item-price'>
-        <span><%= fish.item_a%></span>
-      </div>
-   
-
-      <h3 class='item-name'>
-
-        <%= fish.name %>
-      </h3>
-      
-     <%end %>
-      <% end %>
-      <% end %>
-    </div>
-</div>
-
-</li>
+        <div class='item-info'>
+        <div class='item-price'>
+            <span><%= fish.item_a%></span>
+       </div>
+          <h3 class='item-name'><%= fish.name %></h3>
+       </div>
        
-</ul>
-</div>
+        <% end %>
+        <% end %>
+        <% end %>
+      </li>
+   </ul>
+  </div>
+  </div>
+ <%#釣果一覧%>
+
  </div>
  </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
+ 
  
 <%= render "shared/footer_fish" %>

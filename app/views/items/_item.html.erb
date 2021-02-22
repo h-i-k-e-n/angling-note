@@ -1,21 +1,18 @@
 
-<li class='list'>
-           
- <%= link_to edit_item_path(item) do %>
-    <div class='item-img-content'>
-      <%= image_tag item.image, class: "item-img" %>
-    </div>
-    <div class='item-info'>
-    <div class='item-price'>
-        <span><%= item.manufacturer%></span>
+<li class='list'>         
+    <%= link_to edit_item_path(item) do %>
+       <div class='item-img-content'>
+       <%= image_tag item.image, class: "item-img" %>
       </div>
 
-      <h3 class='item-name'>
+        <div class='item-info'>
+            <div class='item-price'>
+                <span><%= item.manufacturer%></span>
+           </div>
 
-        <%= item.title %>
-      </h3>
-    </div>
-  <% end %>
+           <h3 class='item-name'><%= item.title %></h3>
+        </div>
+   <% end %>
 </li>
  
           
