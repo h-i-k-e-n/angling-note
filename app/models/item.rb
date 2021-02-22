@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
   validates :title,:manufacturer,:purchase_date,:retailer,:image, presence: true
   has_one :category
   has_one_attached :image
-  belongs_to :fish
+  
   
   include ActiveHash::Associations
   has_many :checks

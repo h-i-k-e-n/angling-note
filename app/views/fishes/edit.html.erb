@@ -1,0 +1,63 @@
+<%= render "shared/third_header" %>
+    <div class="items-sell-contents">
+      <div class="items-sell-main">
+       <h2 class="items-sell-title">アイテムの情報を入力</h2>
+          <%= form_with(model: @fish, local: true) do |f| %>
+
+          <%= render 'shared/error_messages', model: f.object %>
+
+            <div class="img-upload">
+                    <div class="weight-bold-text">
+                      アイテム画像
+                    </div>
+                 <div class="click-upload">
+                      <p>
+                        クリックしてファイルをアップロード
+                      </p>
+                      <%= f.file_field :image, id:"item-image" %>
+                 </div>
+            </div>
+ 
+         <div class="new-items">
+              <div class="weight-bold-text">
+                タイトル
+              </div>
+              <%= f.text_area :name, class:"items-tex", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+      
+        
+        <div class="form">
+            <div class="weight-bold-text">
+              使用アイテム
+            </div>
+            <div class="form">
+              <%= f.collection_select(:item_a, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+            </div>
+  
+
+            <div class="form">
+              <%= f.collection_select(:item_b, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+            </div>
+ 
+
+            <div class="form">
+              <%= f.collection_select(:item_c, Item.all, :title, :title, { include_blank: '使用アイテム選択'}, {class:"select-bo", id:"item-category"}) %>
+            </div>
+
+              <div class="items-explain">
+                <div class="weight-bold-text">
+                  メモ
+                </div>
+                <%= f.text_area :memo , class:"items-text", id:"item-info", placeholder:"メモを入力"  ,maxlength:"500" %>
+              </div>
+        </div>
+    
+
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+    </div>
+   
+  </div>
+  <% end %>
+</div>
+  
+</div>

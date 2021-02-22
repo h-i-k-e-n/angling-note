@@ -1096,7 +1096,20 @@ footer p {
   width: 80%;
 }
 
+.search-for {
+  text-align: center;
+ 
+}
 
+.search-for .search-input {
+  width: 30%;
+  margin-right: 10px;
+}
+
+.search-for .search-btn {
+  margin: 10px;
+  width: 80%;
+}
 .service-box {
   width: 100%;
 }

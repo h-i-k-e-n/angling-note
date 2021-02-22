@@ -264,6 +264,13 @@
   
   display: inline-block;
 }
+.sell-btn-conte {
+  width: 100%;
+  text-align: end;
+  display: inline-block;
+}
+
+
 .sell-btn {
   background: #ea352d;
   border: 1px solid #ea352d;
