@@ -15,9 +15,16 @@ resources :categories, except: [ :destroy] do
   end
 end
 
+resources :plans
+
+resources :fishes do
+  collection do
+    get "search"
+  end
+end
+
 resources :checks do
  resources :choices
 end
-resources :plans
-resources :fishes
+
 end

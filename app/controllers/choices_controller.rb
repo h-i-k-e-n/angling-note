@@ -9,6 +9,8 @@ class ChoicesController < ApplicationController
       @check = Check.find(params[:check_id])
       @choice = Choice.new
     end
+
+    
     def create
       @check = Check.find(params[:check_id])
      if

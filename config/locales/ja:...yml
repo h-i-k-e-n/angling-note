@@ -4,3 +4,6 @@
     attributes:
       plan:
         image: カバー画像
+      fish:
+        image: 釣果写真
+        name: タイトル

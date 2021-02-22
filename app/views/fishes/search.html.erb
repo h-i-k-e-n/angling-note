@@ -7,16 +7,27 @@
  <div class="items-sell-cont">
 
  
-  <div class="items-sell-m">
-
-<%= form_with(url: fishes_path, local: true, method: :post, ) do |f| %>
+<div class="items-sell-m">
  
-  <%= render 'shared/error_messages', model: f.object%>
 
 
+
+
+<%= form_with(url: search_fishes_path, local: true, method: :get, class: "search-for") do |f| %>
+  <%= f.text_field :keyword, placeholder: "検索する", class: "input" %>
+  <br><br>
+  <%= f.submit "検索", class: "search-btn" %>
+<% end %>
+<br><br>
+
+
+
+
+<div class="contents row">
+ <%= form_with(url: fishes_path, local: true, method: :post, ) do |f| %>
  <div class="img-uplod">
       <div class="weight-bold-text">
-        魚の写真
+        釣果写真
       
       <div class="click-upload">
         <p>
@@ -55,13 +66,15 @@
         <div class="weight-bold-text">
           メモ
         </div>
-        <%= f.text_area :memo , class:"items-tex", id:"item-info", placeholder:"釣れた場所、釣れた日、サイズ" ,maxlength:"40" %>
+        <%= f.text_area :memo , class:"items-tex", id:"item-info", placeholder:"釣れた場所、釣れた日、サイズ" ,maxlength:"500" %>
       </div>
-  <br><br>
+  <br>
   <%= f.submit "登録", class: "search-btn" %>
 
 <% end %>
+<br><br><br><br>
 
+</div>
 
  </div></div></div>
  

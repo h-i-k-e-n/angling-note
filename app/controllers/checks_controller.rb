@@ -25,6 +25,8 @@ def show
   @checks = Choice.where(check_id: params[:id])
 end
 
+
+
 def destroy
   if
   @check = Check.find(params[:id]) && Choice.find_by(check_id: params[:id])
@@ -32,11 +34,12 @@ def destroy
   redirect_to check_path
 else
     @check = Check.find(params[:id])
-  @check.destroy
-
-  redirect_to checks_path
+    @check.destroy
+    redirect_to checks_path
   end
 end
+
+
 private
 
   def check_params
