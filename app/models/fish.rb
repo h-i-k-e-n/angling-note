@@ -4,7 +4,7 @@ class Fish < ActiveRecord::Base
  
         def self.search(search)
           if search != ""
-            @fishes = Fish.where('name LIKE(?) OR item_a LIKE (?) OR item_b LIKE (?)OR item_c LIKE (?)', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+            @fishes = Fish.where('name LIKE(?) OR item_a LIKE (?) OR item_b LIKE (?)OR item_c LIKE (?)OR memo LIKE (?)', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
           
           else
             @fishes = Fish.all

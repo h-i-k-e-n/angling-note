@@ -1,24 +1,24 @@
-<div class='p-top'>
-    <div class="items-sell-contens">
-       <div class="items-sell-main">
 
-            <div class='item-inf'>
-                <div class='item-name'>
-                    <%= @check.title%>
-                </div><br><br>
+    <div class="checks-show-contents">
+       <div class="checks-main">
+
+            <div class='check-line'>
+                <div class='check-title'>
+                    <h2><%= @check.title%></h2>
+                </div><br>
                       <% if @check.check_item_id.present?%>
                       <% if @check.check_list_id.present?%><br>
                       <%= @check.check_item_id.gsub(/,/, "/").delete!('[]"')%><br><br><br>
                       <%= @check.check_list_id.gsub(/,/, "/").delete!('[]"')%><br><br><br>
                       <% end %>
                       <% end %>
-                <ul class='item-list'>     
+                <ul class='checks-lists'>     
                 <%= render "choices/choice" %>
               </ul>
             </div>
     
-            <div class="items-sell-contens">
-                  <div class="sell-btn-contents">
+            <div class="checks-show-contents">
+                  <div class="check-btn-contents">
                   <%= link_to 'もどる', checks_path, class:"btn" %>
                   <%= link_to '追加', new_check_choice_path(@check.id),  method: :get, class:'btn' %>
                   <%= link_to '削除', check_path(@check), method: :delete, class:'btn' %>
@@ -27,5 +27,5 @@
 
         </div>
      </div>
- </div>
+ 
      

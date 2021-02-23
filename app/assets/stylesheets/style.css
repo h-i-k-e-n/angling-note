@@ -367,51 +367,6 @@ embed {
   height: 100%;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.hide {
-  display: none;
-}
-
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-}
-
 img {
   display: inline-block;
   vertical-align: middle;
@@ -725,15 +680,8 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
   font-weight: bold;
 }
 
-.title--big {
-  font-size: 1.5em;
-  font-weight: bold;
-}
 
-.title--big i {
-  font-style: italic;
-  font-size: 1.8em;
-}
+
 
 header.header {
   padding: 10px;
@@ -1012,14 +960,6 @@ div.contents.row .success {
 div.contents.row .success h3 {
   margin: 10px auto;
 }
-
-
-.tit {
-  
-  margin: 25px 0 25px;
-  
-}
-
 form input,
 form textarea {
   width: 100%;
@@ -1042,35 +982,6 @@ form input[type="submit"]:hover {
   background-color: #84d3ef;
 }
 
-.container {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
-}
-
-.container h3 {
-  margin: 0 0 20px;
-  text-align: center;
-  font-weight: normal;
-  font-size: 20px;
-  color: #666;
-}
-
-.comments {
-  padding: 5px;
-  margin-top: 15px;
-}
-
-.comments a {
-  color: #57C3E9;
-}
-
-.comments a:hover {
-  text-decoration: underline;
-}
-
 footer {
   margin: 30px auto;
   padding: 10px;
@@ -1086,54 +997,3 @@ footer p {
   padding-top: 32px;
 }
 
-.search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-form .search-btn {
-  margin: 10px;
-  width: 80%;
-}
-
-.search-for {
-  text-align: center;
- 
-}
-
-.search-for .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-for .search-btn {
-  margin: 10px;
-  width: 80%;
-}
-.service-box {
-  width: 100%;
-}
-.img-box {
-  width: 100%;
-  padding-top: 70%;
-  position: relative;
-}
-.service-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-}
-
-.error-alert {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5vh;
-}
-
-.error-message {
-  font-size: 1.3vw;
-  list-style: circle;
-  color: rgb(182, 48, 0);
-}

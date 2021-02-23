@@ -19,64 +19,16 @@
   flex-direction: column;
   min-width: 500px;
 }
-.items-sell-cont {
-  
-  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
-  font-size: 14px;
-  display: flex;
-  
-  flex-direction: column;
-  min-width: 40px;
-  padding:0 30px;
-}
 
-.items-sell-header {
-  padding: 5vh 0;
-  text-align: center;
-}
+
 
 .items-sell-main {
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
-  padding: 10vh 15vw;
-  
+  padding: 10vh 15vw; 
 }
 
-.items-sell-mai {
-  background-color: #f5f5f5;
-  width: 70vw;
-  min-width: 450px;
-  padding: 10vh 15vw;
-  
-}
-
-.items-sell-ma {
-  background-color: #FFF;
-  width: 70vw;
-  min-width: 450px;
-  
-}
-.items-sell-m {
-  background-color: rgb(228, 225, 225);
-  width: 25vw;
-  min-width: 350px;
-  text-align: center;
-  padding-top: 32px;
-  height: 100%;
-}
-.items-sell- {
-  background-color: rgb(255, 255, 255);
-
-  min-width: 350px;
-  display: flex;
- justify-content: end;
-}
-.items-sel {
- 
-  display: flex;
- 
-}
 .items-sell-title {
   font-size: 22px;
   font-weight: bold;
@@ -84,15 +36,6 @@
 }
 
 /* 共通 */
-.indispensable {
-  background: #ea352d;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-}
 
 .weight-bold-text {
   font-weight: bold;
@@ -106,14 +49,7 @@
   background-color: #f5f5f5;
   padding-left: 20px;
 }
-.select-bo {
-  height: 30px;
-  width: 100%;
-  background-color: #f5f5f5;
-  padding-left: 20px;
-  border: 3px solid lightgray;
-  margin: 2vh 0;
-}
+
 .question {
   width: 20px;
   height: 20px;
@@ -140,12 +76,7 @@
   flex-wrap: wrap;
   padding: 2vh 0;
 }
-.img-uplod {
 
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2vh 0;
-}
 .click-upload {
   margin: 15px 0;
   min-width: 250px;
@@ -190,16 +121,6 @@
 /* /商品名と商品説明 */
 
 /* 商品の詳細など */
-.items-detail {
-  display: flex;
-  justify-content: space-between;
-  padding: 2vh 0;
-}
-
-.items-detail>.form {
-  width: 300px;
-  padding: 2vh 0;
-}
 
 .select-box {
   margin: 2vh 0;
@@ -257,19 +178,7 @@
 .sell-btn-contents {
   width: 100%;
   text-align: center;
-  
 }
-.sell-btn-content {
-  width: 100%;
-  
-  display: inline-block;
-}
-.sell-btn-conte {
-  width: 100%;
-  text-align: end;
-  display: inline-block;
-}
-
 
 .sell-btn {
   background: #ea352d;
@@ -334,86 +243,6 @@
   padding-bottom: 70px;
 }
 
-.form-header {
-  width: 100%;
-  height: 120px;
-  text-align: center;
-  font-size: 22px;
-}
-
-.form-header-text {
-  line-height: 100px;
-  border-bottom: 1px solid #f5f5f5;
-  font-weight: bold;
-}
-
-.form-group {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-.form-group:first-child {
-  padding: 0;
-}
-
-.form-text-wrap {
-  width: 100%;
-  height: 20%;
-}
-
-.form-text {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.input-default {
-  width: 100%;
-  margin-top: 5px;
-  height: 48px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 16px;
-  resize: none;
-}
-
-.info-text {
-  color: #888;
-  font-size: 15px;
-  margin-top: 3px;
-}
-
-.form-info-header {
-  font-weight: bold;
-}
-
-.form-info-text {
-  font-size: 15px;
-}
-
-.input-name-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.input-name {
-  width: 130px;
-  margin: 5px 20px 0 20px;
-  height: 48px;
-  line-height: 30px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 14px;
-  resize: none;
-}
-
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -434,68 +263,4 @@
 .input-birth-wrap p {
   line-height: 60px;
   padding: 0 5px;
-}
-.input-birth-wra {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.input-birth-wra select {
-  width: 75px;
-  margin-top: 6px;
-  height: 25px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 12px;
-  cursor: pointer;
-}
-.input-birth-wra p {
-  line-height: 10px;
-  padding: 0 5px;
-
-
-}
-.field_with_errors {
-  display: contents;
-}
-
-
-.form-bottom-text {
-  font-size: 15px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.form-bottom-text:last-child {
-  margin: 0;
-  padding-bottom: 50px;
-}
-
-.form-bottom-text>span {
-  color: #0099e8;
-  cursor: pointer;
-}
-
-.register-btn {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.register-red-btn {
-  width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.register-info {
-  margin: 30px 180px 0 0;
-  color: #0099e8;
-  text-align: right;
-  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 class ChecksController < ApplicationController
 
   def index
-      @checks = Check.all
+      @checks = Check.all.order("created_at DESC")
   end
 
 

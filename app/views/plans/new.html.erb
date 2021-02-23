@@ -1,9 +1,9 @@
 <%= render "shared/plan_new_header" %>
 
-<div class="items-sell-contents">
+<div class="plans-contents">
   
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">プランの内容を入力</h2>
+  <div class="plans-main">
+    <h2 class="plans-title">プランの内容を入力</h2>
     
     <%= form_with( model: @plan, local: true) do |f| %>
 
@@ -12,7 +12,7 @@
 
        <%# カバー画像 %>
         <div class="img-upload">
-            <div class="weight-bold-text">
+            <div class="plans-bold-text">
               カバー画像
             </div>
             <div class="click-upload">
@@ -25,31 +25,31 @@
     <%# 予定内容 %>
     <div class="new-items">
 
-          <div class="weight-bold-text">
+          <div class="plans-bold-text">
              タイトル
           </div>
-         <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+         <%= f.text_area :title, class:"plans-text", id:"plan-name", placeholder:"タイトルを入力", maxlength:"40" %>
           
         
     <div class="form">
 
-            <div class="items-explain">
-                <div class="weight-bold-text">
+            <div class="plans-explain">
+                <div class="plans-bold-text">
                   場所
                 </div>
-                <%= f.text_area :place, class:"items-text", id:"item-info", placeholder:"○○海岸、××海水浴場、□□漁港"  ,maxlength:"40" %>
+                <%= f.text_area :place, class:"plans-text", id:"plan-info", placeholder:"○○海岸、××海水浴場、□□漁港"  ,maxlength:"40" %>
             </div>
 
-            <div class="items-explain">
-                <div class="weight-bold-text">
+            <div class="plans-explain">
+                <div class="plans-bold-text">
                   住所
                 </div>
-                <%= f.text_area :adress, class:"items-text", id:"item-info", placeholder:"住所を入力"  ,maxlength:"40" %>
+                <%= f.text_area :adress, class:"plans-text", id:"plan-info", placeholder:"住所を入力"  ,maxlength:"40" %>
             </div>
 
 
-    <div class="items-explain">
-         <div class="weight-bold-text">
+    <div class="plans-explain">
+         <div class="plans-bold-text">
            開始日
         </div>
         <div class='input-birth-wrap'>
@@ -60,7 +60,7 @@
         </div>
 
 
-          <div class="weight-bold-text">
+          <div class="plans-bold-text">
                 終了日
           </div>
           <div class='input-birth-wrap'>
@@ -70,11 +70,11 @@
                         date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
           </div>
 
-          <div class="items-explain">
-            <div class="weight-bold-text">
+          <div class="plans-explain">
+            <div class="plans-bold-text">
               メモ
             </div>
-            <%= f.text_area :memo , class:"items-text", id:"item-info", placeholder:"干潮6:30、満潮13:00、大潮、最寄りにコンビニあり" ,maxlength:"40" %>
+            <%= f.text_area :memo , class:"plans-text", id:"plan-info", placeholder:"干潮6:30、満潮13:00、大潮、最寄りにコンビニあり" ,maxlength:"40" %>
           </div>
        </div>
      </div>
@@ -85,8 +85,8 @@
     
     
     <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "保存" ,class:"sell-btn" %>
+    <div class="plan-btn-contents">
+      <%= f.submit "保存" ,class:"plan-btn" %>
        <%=link_to 'もどる', plans_path, class:"back-btn" %> 
     </div>
     <%# /下部ボタン %>

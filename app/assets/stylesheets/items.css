@@ -88,7 +88,6 @@
 }
 .reason-list-tex {
   font-size: 24px;
-  
 }
 
 .reason-list-glay-text {
@@ -101,8 +100,16 @@
 }
 
 
+.bottom-name {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
 
-.nav {
+.header-name {
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -111,47 +118,13 @@
   padding: 1vh 0;  
 }
 
-
-.nav-bottom {
+.header {
   font-size: 18px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
-
-.na {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-around;
+  justify-content: ;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;  
   
 }
-.na-bottom {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
-.nave {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;  
-  
-}
-.nave-bottom {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
+

@@ -1,26 +1,22 @@
-<div class="items-sell-contents">
+<div class="category-new-contents">
   
-      <div class="items-sell-mai">
+      <div class="category-new-main">
           <%= form_with model: @category, local: true do |f| %>
           <%= render 'shared/error_messages', model: f.object %>
-
-            <div class="article-box">
-              <div class='list'>
-                <h2 class='reason-list-tex'>
-                    <span class='reason-list-glay-text'>カテゴリーを登録する</span>
-                  </h2>
-                  <div class="tit">
-                    <%= f.text_field :category, class:"title", placeholder:"カテゴリー入力" %>
-                  </div>
-            
-                      <div class="sell-btn-contents">
-                        <%= f.submit "登録" ,class:"sell-btn" %>
               
-                        <%=link_to 'もどる', root_path, class:"back-btn" %>
-                      </div>
-                      <% end %>
-                  
-              </div>
-            </div>
-      </div>
-   </div>
+          <h2 class='category-title-text'>
+            <span class='category-title-color-text'>カテゴリーを登録する</span>
+          </h2>
+          <div class="category-text-area">
+            <%= f.text_field :category, class:"bold", placeholder:"カテゴリー入力" %>
+          </div>
+    
+          <div class="category-btn-contents">
+            <%= f.submit "登録" ,class:"category-btn" %>
+  
+            <%=link_to 'もどる', root_path, class:"category-back-btn" %>
+          </div>
+         <% end %>
+            
+       </div>
+</div>

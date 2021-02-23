@@ -1,16 +1,16 @@
 <%= render "shared/check" %>
- <div class="items-sell-contents">
+ <div class="checks-contents">
   
-  <div class="items-sell-main">
-      <h1 class="items-sell-title">リスト一覧</h1>
+  <div class="checks-main">
+      <h1 class="checks-title">リスト一覧</h1>
     
 
-      <ul class='item-lis'>     
+      <ul class='checks-lists'>     
           <% @checks.each do |check| %>
           <li class='list'>
             <%= link_to check_path(check.id) do %>
-             <div class='item-inf'>
-              <div class='item-name'>
+             <div class='check-line'>
+              <div class='check-title'>
               <%= check.title %>
              </div>
             </div>         
@@ -21,4 +21,4 @@
   </div>
   
   </div>
-<%= render "shared/footer_second" %>
+<%= render "shared/check_footer" %>

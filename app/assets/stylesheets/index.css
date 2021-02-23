@@ -22,29 +22,29 @@
   top: 0;
 
 }
+
 .item-price {
     font-size: 1.5vh;
     display: flex;
     justify-content: space-between;
   }
+
   .item-info {
     background-color: #FFF;
     color: black;
     padding: 1vw;
-    
   }
+
   .item-inf {
     margin: 3vh;
     padding: 1vw;
     border:solid rgb(109, 109, 109);
   }
+
   .column {
     height: 100%;
-
   }
-  .colum {
  
-  }
   .item-lists {
     
     display: flex;

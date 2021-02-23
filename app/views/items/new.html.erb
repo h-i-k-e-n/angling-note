@@ -1,98 +1,100 @@
-<%= render "shared/third_header" %>
-   <div class="items-sell-contents">
-   <div class="items-sell-main">
-    <h2 class="items-sell-title">アイテムの情報を入力</h2>
+<%= render "shared/new_item_header" %>
+  <div class="items-sell-contents">
+    <div class="items-sell-main">
+
     <%= form_with( model: @item, local: true) do |f| %>
-    <%= render 'shared/error_messages', model: f.object %>
-
-
-    <%# アイテム登録 %>
-         <div class="img-upload">
-             <div class="weight-bold-text">
+    <%= render 'shared/error_messages', model: f.object %>   
+    <h2 class="items-sell-title">アイテムの情報を入力</h2>
+        
+          <%# アイテム画像 %>
+          <div class="img-upload">
+            <div class="weight-bold-text">
               アイテム画像
             </div>
-             <div class="click-upload">
-                  <p>クリックしてファイルをアップロード</p>
-                  <%= f.file_field :image, id:"item-image" %>
+            <div class="click-upload">
+              <p>
+                クリックしてファイルをアップロード
+              </p>
+              <%= f.file_field :image, id:"item-image" %>
+
             </div>
-         </div>
-   
-      <div class="new-items">
-        <div class="weight-bold-text">
-             タイトル
-       </div>
-         <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
-      
-       <div class="form">
-              <div class="weight-bold-text">
-                   カテゴリー
-             </div>
-               <%= f.collection_select(:category_id, Category.all, :id, :category, {}, {class:"select-box", id:"item-category"}) %>
+          </div>
+          <%# /アイテム画像 %>
+
+    
+    <div class="new-items">
+      <div class="weight-bold-text">
+        タイトル
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトルを入力", maxlength:"40" %>
+        
+        <div class="form">
+            <div class="weight-bold-text">
+              カテゴリー
+            </div>
+            <%= f.collection_select(:category_id, Category.all, :id, :category,{ include_blank: '選択してください'}, {class:"select-box", id:"item-category"}) %>
          
-         <div class="items-explain">
-            <div class="weight-bold-text">
-                 メーカー
-           </div>
-             <%= f.text_area :manufacturer, class:"items-text", id:"item-info", placeholder:"メーカーを入力"  ,maxlength:"40" %>
-         </div>
-
-       <div class="items-explain">
-            <div class="weight-bold-text">
-                 購入日
-           </div>
-
-          <div class='input-birth-wrap'>
-           <%= raw sprintf(f.date_select(:purchase_date,class:'select-birth',
+          <div class="items-explain">
+        <div class="weight-bold-text">
+          メーカー
+        </div>
+        <%= f.text_area :manufacturer, class:"items-text", id:"item-info", placeholder:"メーカーを入力"  ,maxlength:"40" %>
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          購入日
+        </div>
+        <div class='input-birth-wrap'>
+      <%= raw sprintf(f.date_select(:purchase_date,class:'select-birth',
                     id:"birth-date",use_month_numbers: true,
                     prompt:'--',start_year: 2000,end_year: (Time.now.year),
                     date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-          </div>
-
-            <div class="items-explain">
-              <div class="weight-bold-text">
-                    購入場所
-              </div>
-                <%= f.text_area :retailer , class:"items-text", id:"item-info", placeholder:"購入場所を入力"  ,maxlength:"40" %>
-            </div>
-
-
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          購入場所
+        </div>
+        <%= f.text_area :retailer , class:"items-text", id:"item-info", placeholder:"購入場所を入力"  ,maxlength:"40" %>
+      </div>
       <div class="items-explain">
         <div class="weight-bold-text">
           金額
         </div>
         <%= f.text_area :price, class:"items-text", id:"item-info", placeholder:"価格を入力"  ,maxlength:"7" %>
       </div>
-
       <div class="items-explain">
         <div class="weight-bold-text">
           数量
         </div>
         <%= f.text_area :quantity , class:"items-text", id:"item-info", placeholder:"数量を入力"  ,maxlength:"4" %>
       </div>
-
       <div class="items-explain">
         <div class="weight-bold-text">
           重量(g)
         </div>
         <%= f.text_area :weight, class:"items-text", id:"item-info", placeholder:"重量を入力"  ,maxlength:"6" %>
       </div>
-
       <div class="items-explain">
         <div class="weight-bold-text">
           メモ
         </div>
         <%= f.text_area :memo , class:"items-text", id:"item-info", placeholder:"メモを入力"  ,maxlength:"500" %>
       </div>
+    </div>
+    
+    
+
+
+    
+    
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "保存" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
   </div>
-    <%#  /アイテム登録 %>
+  <% end %>
 
-            <%# 下部ボタン %>
-            <div class="sell-btn-contents">
-              <%= f.submit "変更する" ,class:"sell-btn" %>
-              <%= link_to '削除', item_path(@item), method: :delete, class:'btn' %>
-            </div>
-            <%# /下部ボタン %>
-
-    <% end %>
-  </div> 
+  
 </div>
