@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   root to: 'items#index'
  
-  resources :items, except: [ :index] do
+  resources :items do
     collection do
     get "search"
     get "category_id"
     end
   end
 
-  resources :categories, except: [ :destroy] do
+  resources :categories, only: [ :index, :new, :create] do
     collection do
       get "search"
       get "category_id"
@@ -17,14 +17,14 @@ Rails.application.routes.draw do
 
   resources :plans
 
-  resources :fishes do
+  resources :fishes,except: [ :new ] do
     collection do
       get "search"
     end
   end
 
-  resources :checks do
-  resources :choices
+  resources :checks, except: [ :edit, :update] do
+  resources :choices,only: [:index, :new, :create]
   end
 
 end
