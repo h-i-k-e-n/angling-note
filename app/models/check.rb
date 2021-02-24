@@ -4,5 +4,5 @@ class Check < ActiveRecord::Base
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one :item
   belongs_to :list
-  has_one :choice,foreign_key: check_id
+  has_one :choice
 end

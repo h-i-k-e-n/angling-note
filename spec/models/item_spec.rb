@@ -3,13 +3,16 @@ require 'rails_helper'
 RSpec.describe Item, type: :model do
   describe '#create' do
     before do
-       @item = FactoryBot.build(:item)
-       @item.image = fixture_file_upload('app/assets/images/item.png')
+      
+       @category = FactoryBot.build(:category)
+       @item = FactoryBot.build(:item, category_id: @category.id)
+       
+       
     end
 
 context 'アイテム登録できるとき' do
   
-      it "title,image,manufacturer,purchase_date,retailer,price,quantity,weight,category_idが存在する時登録できる" do   
+      it "すべての値が正しく入力されていれば保存できること" do
         expect(@item).to be_valid
       end
       it "memoが抜けていても保存できる" do
@@ -103,6 +106,7 @@ context 'アイテム登録できないとき' do
         @item.valid?
         expect(@item.errors.full_messages).to include("数量は数値で入力してください")
          end
+         
         it "半角英語だけでは登録できないこと"do
         @item.quantity = "ww"
         @item.valid?

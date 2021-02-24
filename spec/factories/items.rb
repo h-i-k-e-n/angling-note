@@ -13,6 +13,9 @@ FactoryBot.define do
         category_id    {2}
         
     
-       
+        after(:build) do |item|
+          item.image.attach(io: File.open('app/assets/images/item.png'), filename: 'item.png')
+
+    end
   end
 end

@@ -1,4 +1,4 @@
 class Choice < ActiveRecord::Base
   validates :name, presence: true
-  has_many :checks
+  belongs_to :check
 end
