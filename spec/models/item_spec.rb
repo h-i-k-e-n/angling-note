@@ -7,7 +7,7 @@ RSpec.describe Item, type: :model do
        @item.image = fixture_file_upload('app/assets/images/item.png')
     end
 
-context '登録できるとき' do
+context 'アイテム登録できるとき' do
   
       it "title,image,manufacturer,purchase_date,retailer,price,quantity,weight,category_idが存在する時登録できる" do   
         expect(@item).to be_valid
@@ -18,7 +18,7 @@ context '登録できるとき' do
       end
      end
       
-context '新規登録できないとき' do
+context 'アイテム登録できないとき' do
          
         it "titleが空では登録できない" do
              @item.title = nil
