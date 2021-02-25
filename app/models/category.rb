@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
   validates :category, presence: true
-  has_many :items ,dependent: :destroy
+  belongs_to :item ,dependent: :destroy
 end

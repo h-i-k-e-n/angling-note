@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_032750) do
     t.date "end_at"
     t.string "title"
     t.string "place"
-    t.string "adress"
+    t.string "address"
     t.text "memo"
     t.string "skt_a"
     t.string "skt_b"
