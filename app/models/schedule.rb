@@ -51,5 +51,5 @@ class Schedule < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :plans
+  belongs_to :plan
 end

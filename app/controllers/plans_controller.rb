@@ -13,7 +13,8 @@ class PlansController < ApplicationController
 
   def create
       @plan = Plan.new(plan_params)
-  if  @plan.save
+  if   
+        @plan.save
       redirect_to plans_path
     else
       render :new

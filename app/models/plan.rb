@@ -3,5 +3,5 @@ class Plan < ActiveRecord::Base
   
   has_one_attached :image
   include ActiveHash::Associations
-   belongs_to :schedule
+   has_many :schedule
 end
