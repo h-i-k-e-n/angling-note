@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(version: 2021_02_20_032750) do
   end
 
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.date "start_at"
+    t.date "end_at"
     t.string "title"
     t.string "place"
     t.string "adress"

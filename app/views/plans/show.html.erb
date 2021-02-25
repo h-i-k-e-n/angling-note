@@ -15,7 +15,7 @@
                       </ul>
                     </div>
 
-                      <p><%= @plan.start %><br><%= @plan.title %> </p>
+                      <p><%= @plan.start_at %><br><%= @plan.title %> </p>
                   </div>
 
 <div class="content_pos"> 
@@ -23,7 +23,7 @@
  <li class='list'>
                
       <h2>スケジュール</h2>
-      <li> <%= @plan.start%></li>
+      <li> <%= @plan.start_at%></li>
           <h4><li> <%= @plan.skt_a%> <%= @plan.skm_a%></li></h4>
           <h4><li> <%= @plan.skt_b%> <%= @plan.skm_b%></li></h4>
           <h4><li> <%= @plan.skt_c%> <%= @plan.skm_c%></li></h4>
@@ -34,7 +34,7 @@
           <h4><li> <%= @plan.skt_h%> <%= @plan.skm_h%></li></h4>
           <h4><li> <%= @plan.skt_i%> <%= @plan.skm_i%></li></h4>
           <h4><li> <%= @plan.skt_j%> <%= @plan.skm_j%></li></h4>
-      <li> <%= @plan.end%></li>
+      <li> <%= @plan.end_at%></li>
 
 
       <h2>場所</h2>

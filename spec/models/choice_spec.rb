@@ -8,16 +8,16 @@ RSpec.describe Choice, type: :model do
       @choice = FactoryBot.build(:choice, check_id: @check.id)
     end
 
-    context 'チェックリストを登録できるとき' do
+    context 'チェックリストに登録できるとき' do
 
         it "nameが存在したら投稿できる" do 
           expect(@choice).to be_valid     
         end
     end
 
-    context 'チェックリストを登録できないとき' do
+    context 'チェックリストに登録できないとき' do
 
-        it "nameが存在しないとき保存できないこと"do
+        it "nameが存在しないとき保存できない"do
               @choice.name = nil
               @choice.valid?
               expect(@choice.errors.full_messages).to include("Nameを入力してください")

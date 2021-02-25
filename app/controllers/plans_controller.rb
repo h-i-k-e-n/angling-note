@@ -48,7 +48,7 @@ end
 private
 
   def plan_params
-      params.require(:plan).permit(:title, :start, :end, :place, :adress, :memo,:image,
+      params.require(:plan).permit(:title, :start_at, :end_at, :place, :adress, :memo,:image,
                                    :skt_a,:skt_b,:skt_c,:skt_d,:skt_e,:skt_f,:skt_g,:skt_h,:skt_i,:skt_j,
                                    :skm_a,:skm_b,:skm_c,:skm_d,:skm_e,:skm_f,:skm_g,:skm_h,:skm_i,:skm_j)
   end

@@ -4,6 +4,8 @@
     attributes:
       plan:
         image: カバー画像
+        start_at: 開始日
+        end_at: 終了日
       fish:
         image: 釣果写真
         name: タイトル

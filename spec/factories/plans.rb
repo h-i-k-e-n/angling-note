@@ -4,8 +4,8 @@ FactoryBot.define do
     title   { "渓流釣り"}
     place   { "菊池渓谷"}
     adress  { "熊本県菊池市原" }
-    start   { Faker::Date.in_date_period }
-    
+    start_at   { Date.today }
+    end_at     { Date.today }
     memo    { "最寄りの情報" }
     skt_a   {"7:00"}
     skt_b   {"7:30"}
