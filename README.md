@@ -47,11 +47,11 @@ https://gyazo.com/7e6a9c2595df268a0182407f3f3133f8
 
 #### 釣果
 ![釣果](https://github.com/h-i-k-e-n/angling-note/blob/master/ac691a540e4a5d42d0f68bcb7289ecf1.jpg)
-ここでは釣った魚の写真の登録、検索、詳細表示ができます。
-https://gyazo.com/7449418983a034c261313f73ca9b1a76
+ここでは釣った魚の写真の登録、検索、詳細表示ができます。<br>
+https://gyazo.com/7449418983a034c261313f73ca9b1a76 <br>
 どのアイテムを使って釣れたのか、自身の釣果が増えるとよく釣れているアイテムや魚種など知りたくなります。
 キーワード検索が可能なのでアイテム名、タイトル名、メモの内容で検索することも可能となっています。
-https://gyazo.com/90267d63f66ee62cbad28d532b9b3ecb
+<br> https://gyazo.com/90267d63f66ee62cbad28d532b9b3ecb <br>
 詳細表示では登録内容の見易さを追及しました。
 
 
@@ -62,8 +62,8 @@ https://gyazo.com/90267d63f66ee62cbad28d532b9b3ecb
 項目にないものは追記することが可能です。
 
 買い物リストを作成する場合、タイトルのみ入力し空の状態で作成し必要な項目を追加することが可能です。
-(リスト作成)https://gyazo.com/0c179f8bc1b366fd22b8ff4e841b91d1
-(項目追記)https://gyazo.com/d7c0237b03bcb8b89f749c0e8d5aff30
+<br> (リスト作成)https://gyazo.com/0c179f8bc1b366fd22b8ff4e841b91d1 <br>
+<br> (項目追記)https://gyazo.com/d7c0237b03bcb8b89f749c0e8d5aff30 <br>
 
 
 
