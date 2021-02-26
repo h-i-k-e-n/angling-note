@@ -114,7 +114,7 @@ RSpec
 ## エディタ
 VSCode
 
-# テーブル設計
+# DB設計
 ## items テーブル
 
 | Column             | Type       | Options                        |
