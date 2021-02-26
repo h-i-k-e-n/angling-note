@@ -57,7 +57,7 @@ https://gyazo.com/90267d63f66ee62cbad28d532b9b3ecb
 
 #### チェックリスト
 ![リスト作成](https://github.com/h-i-k-e-n/angling-note/blob/master/eee9e1e15aad388bbf78f580f4dd6511.png)
-![リスト内容](https://github.com/h-i-k-e-n/angling-note/blob/master/3679659d8c407e995ed225a2928d88c1.png
+![リスト内容](https://github.com/h-i-k-e-n/angling-note/blob/master/3679659d8c407e995ed225a2928d88c1.png)
 持ち物リストを作成する場合、チェック項目の内容は登録したアイテムとテンプレートとして元々登録されているアイテムを選んで作成する。
 項目にないものは追記することが可能です。
 
