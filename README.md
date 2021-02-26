@@ -29,7 +29,8 @@
 
 # DEMO
 ##### トップページ
-![トップページ](https://gyazo.com/2ba99338dd987d68f57d8e7457e88e33)
+![トップページ](https://github.com/h-i-k-e-n/angling-note/blob/master/image.jpeg)
+https://gyazo.com/2ba99338dd987d68f57d8e7457e88e33
 登録したアイテムが登録が新しい順に10個表示されます。ヘッダーにはそれぞれ、アイテム登録、カテゴリ登録、アイテム一覧、プラン一覧、リスト一覧、釣果写真一覧ページに移動できます。
 
 
